@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="changeFirstData()">changeFirstData</button>
+  <button ion-button (click)="addOneData()" >addOneData</button>
+  <button ion-button (click)="removeOneData()">removeOneData</button>
+  <dx-data-grid ng-if="columns" [dataSource]="datas" [columns]="columns" 
+  [allowColumnResizing]="true" 
+  [allowColumnReordering]="true"
+  [showBorders]="true"
+  [showColumnHeaders]="true"
+  [showRowLines]="true"
+  [showColumnHeaders]="true"
+  [showColumnLines]="true"
+  [filterRow]="true"
+  [headerFilter]="true"
+   >
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+    <dxo-paging [pageSize]="10" [pageIndex]="0"></dxo-paging>
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-header-filter visible="true"></dxo-header-filter>
+    <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
+    <dxo-state-storing [customLoad]="customLoad" [customSave]="customSave" [enabled]="enabledLoading" [storageKey]="storageKey" [type]="storageType" ></dxo-state-storing>
+  </dx-data-grid>
+</ion-content>
