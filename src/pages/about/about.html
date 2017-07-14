@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="changeFirstData()">changeFirstData</button>
+  <!--<button ion-button (click)="changeFirstData()">changeFirstData</button>
   <button ion-button (click)="addOneData()" >addOneData</button>
   <button ion-button (click)="removeOneData()">removeOneData</button>
   <dx-data-grid ng-if="columns" [dataSource]="datas" [columns]="columns" 
@@ -27,5 +27,20 @@
     <dxo-header-filter visible="true"></dxo-header-filter>
     <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
     <dxo-state-storing [customLoad]="customLoad" [customSave]="customSave" [enabled]="enabledLoading" [storageKey]="storageKey" [type]="storageType" ></dxo-state-storing>
+  </dx-data-grid>-->
+
+  <button ion-button (click)="changeFirstData()">changeFirstData</button>
+  <button ion-button (click)="addOneData()">addOneData</button>
+  <button ion-button (click)="removeOneData()">removeOneData</button>
+  <dx-data-grid [dataSource]="orders" [columns]="orderColumns">
+
+    <dxi-column *ngFor="let col of orderColumns" 
+        [dataField]="col.dataField" 
+        cellTemplate="cellTemplate">
+    </dxi-column>
+
+    <div *dxTemplate="let data of 'cellTemplate'">
+      <span [class]="data.value" >{{data.value}}</span>
+    </div>
   </dx-data-grid>
 </ion-content>
