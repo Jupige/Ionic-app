@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Imports a separate module
 import { DxDataGridModule } from 'devextreme-angular/ui/data-grid'; 
+import { OrderItemValuePipe, OrderItemClassPipe } from "../pages/about/pipe/order.cell.pipe";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { DxDataGridModule } from 'devextreme-angular/ui/data-grid';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    OrderItemValuePipe,
+    OrderItemClassPipe
   ],
   imports: [
     BrowserModule,
