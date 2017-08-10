@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { AboutPage } from 'about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Imports a separate module
 import { DxDataGridModule } from 'devextreme-angular/ui/data-grid'; 
+import { OrderItemValuePipe, OrderItemClassPipe } from "about";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { DxDataGridModule } from 'devextreme-angular/ui/data-grid';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    OrderItemValuePipe,
+    OrderItemClassPipe
   ],
   imports: [
     BrowserModule,

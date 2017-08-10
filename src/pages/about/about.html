@@ -32,15 +32,24 @@
   <button ion-button (click)="changeFirstData()">changeFirstData</button>
   <button ion-button (click)="addOneData()">addOneData</button>
   <button ion-button (click)="removeOneData()">removeOneData</button>
-  <dx-data-grid [dataSource]="orders" [columns]="orderColumns">
+  <dx-data-grid [dataSource]="orders" keyExpr="orderId" (onEditingStart)="onEditingStart($event)" (onRowUpdating)="onRowUpdating($event)"
+    (onRowUpdated)="onRowUpdated($event)" (onDisposing)="onDisposing($event)">
 
-    <dxi-column *ngFor="let col of orderColumns" 
-        [dataField]="col.dataField" 
-        cellTemplate="cellTemplate">
+    <dxi-column *ngFor="let col of orderColumns" [dataField]="col.dataField || col" cellTemplate="cellTemplate">
     </dxi-column>
 
-    <div *dxTemplate="let data of 'cellTemplate'">
-      <span [class]="data.value" >{{data.value}}</span>
+    <dxo-editing [allowUpdating]="true" mode="cell"></dxo-editing>
+    <dxo-paging [enabled]="false"></dxo-paging>
+
+    <div *dxTemplate="let cell of 'cellTemplate'">
+      <span [class]="cell.data.orderItems | orderItemClass:cell.column.dataField">{{cell.data.orderItems | orderItemValue:cell.column.dataField}}</span>
+      <span>{{cell.data.orderItems[cell.column.dataField].currentValue}}</span>
     </div>
+
+    <div *dxTemplate="let cell of 'cellTemplate2'">
+      <span [class]="cell.data.orderItems | orderItemClass:cell.column.dataField">{{cell.data.orderItems | orderItemValue:cell.column.dataField}}</span>
+      <span>{{cell.data.orderItems[cell.column.dataField].currentValue}}</span>
+    </div>
+
   </dx-data-grid>
 </ion-content>
