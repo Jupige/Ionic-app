@@ -1,0 +1,32 @@
+.userlist *{
+	color: #fff;
+	font: 12px Arial, sans-serif;
+}
+.userlist{
+	margin: 0;
+	padding: 0;
+}
+template{
+  display:none;
+}
+.userlist li{
+	padding: 10px;
+	border-bottom: 1px solid #555;
+	cursor: pointer;
+	list-style-type: none;
+	height: 100px;
+	width: 100px;
+}
+
+.userlist li:hover{
+	background: #666;
+}
+
+.userlist li.selected{
+	background: orange;
+	font-weight: bold;
+}
+
+user-list{
+display: block;
+}

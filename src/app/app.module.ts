@@ -12,21 +12,30 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Imports a separate module
-import { DxDataGridModule } from 'devextreme-angular/ui/data-grid'; 
+import { DxDataGridModule } from 'devextreme-angular/ui/data-grid';
 import { OrderItemValuePipe, OrderItemClassPipe } from "../pages/about/pipe/order.cell.pipe.new";
+import { UserListPage } from "../pages/user/user-list/user-list";
+import { GoldenLayoutService } from "./golden-layout.service";
+import { CommonModule } from "@angular/common";
+import { GoldenLayoutDirective } from "../pages/layout/layout.directive";
+import { GoldenLayoutComponent } from "./golden.base";
 
 @NgModule({
   declarations: [
+     GoldenLayoutDirective,
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
     OrderItemValuePipe,
-    OrderItemClassPipe
+    OrderItemClassPipe,
+    UserListPage,
+    GoldenLayoutComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     IonicModule.forRoot(MyApp),
     DxDataGridModule
   ],
@@ -36,12 +45,17 @@ import { OrderItemValuePipe, OrderItemClassPipe } from "../pages/about/pipe/orde
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    UserListPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    GoldenLayoutService.overriedGoldenLayout();
+  }
+}
