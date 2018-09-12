@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>bid-split-page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/bid-split-page/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/ie.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="files/bid-split-page/data.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- homePage (矩形) -->
+      <div id="u287" class="ax_default box_1" data-label="homePage">
+        <div id="u287_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u288" class="text" style="display: none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- splitAdd (矩形) -->
+      <div id="u289" class="ax_default button" data-label="splitAdd">
+        <div id="u289_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u290" class="text" style="visibility: visible;">
+          <p><span>添加</span></p>
+        </div>
+      </div>
+
+      <!-- splitClear (矩形) -->
+      <div id="u291" class="ax_default button" data-label="splitClear">
+        <div id="u291_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u292" class="text" style="visibility: visible;">
+          <p><span>重置</span></p>
+        </div>
+      </div>
+
+      <!-- bidRate (矩形) -->
+      <div id="u293" class="ax_default button selected" data-label="bidRate" title="利率" selectiongroup="menu_checked_tab">
+        <div id="u293_div" class="selected"></div>
+        <!-- Unnamed () -->
+        <div id="u294" class="text" style="visibility: visible;">
+          <p><span>投标利率(%)</span></p>
+        </div>
+      </div>
+
+      <!-- bidAmount (矩形) -->
+      <div id="u295" class="ax_default button selected" data-label="bidAmount" title="投标数量" selectiongroup="menu_checked_tab">
+        <div id="u295_div" class="selected"></div>
+        <!-- Unnamed () -->
+        <div id="u296" class="text" style="visibility: visible;">
+          <p><span>投标数量(亿)</span></p>
+        </div>
+      </div>
+
+      <!-- bid_list (动态面板) -->
+      <div id="u297" class="ax_default" data-label="bid_list">
+        <div id="u297_state0" class="panel_state" data-label="State1">
+          <div id="u297_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (动态面板) -->
+            <div id="u298" class="ax_default">
+              <div id="u298_state0" class="panel_state" data-label="State1">
+                <div id="u298_state0_content" class="panel_state_content">
+                </div>
+              </div>
+            </div>
+
+            <!-- bidOrderList (中继器) -->
+            <div id="u299" class="ax_default" data-label="bidOrderList">
+              <script id="u299_script" type="axure-repeater-template" data-label="bidOrderList">
+
+                <!-- bid-split-item (动态面板) -->
+                <div id="u300" class="ax_default u300" data-label="bid-split-item">
+                  <div id="u300_state0" class="panel_state u300_state0" data-label="State1">
+                    <div id="u300_state0_content" class="panel_state_content u300_state0_content">
+
+                      <!-- bid_list_item (矩形) -->
+                      <div id="u301" class="ax_default box_1 selected u301" data-label="bid_list_item">
+                        <div id="u301_div" class="u301_div selected"></div>
+                        <!-- Unnamed () -->
+                        <div id="u302" class="u302 text" style="display: none; visibility: hidden">
+                          <p><span></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- delete (动态面板) -->
+                <div id="u303" class="ax_default ax_default_hidden u303" data-label="delete" style="display: none; visibility: hidden">
+                  <div id="u303_state0" class="panel_state u303_state0" data-label="State1">
+                    <div id="u303_state0_content" class="panel_state_content u303_state0_content">
+
+                      <!-- delBtn (组合) -->
+                      <div id="u304" class="ax_default u304" data-label="delBtn">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u305" class="ax_default box_3 u305">
+                          <div id="u305_div" class="u305_div"></div>
+                          <!-- Unnamed () -->
+                          <div id="u306" class="u306 text" style="visibility: visible;">
+                            <p><span>删除</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- msg (文本框) -->
+                <div id="u307" class="ax_default text_field u307" data-label="msg">
+                  <input id="u307_input" type="number" value="1" class="u307_input"/>
+                </div>
+
+                <!-- amount (文本框) -->
+                <div id="u308" class="ax_default text_field u308" data-label="amount">
+                  <input id="u308_input" type="number" value="3" class="u308_input"/>
+                </div>
+              </script>
+              <div id="u299-1" class="preeval" style="width: 375px; height: 42px;">
+
+                <!-- bid-split-item (动态面板) -->
+                <div id="u300-1" class="ax_default u300" data-label="bid-split-item">
+                  <div id="u300-1_state0" class="panel_state u300_state0" data-label="State1">
+                    <div id="u300-1_state0_content" class="panel_state_content u300_state0_content">
+
+                      <!-- bid_list_item (矩形) -->
+                      <div id="u301-1" class="ax_default box_1 selected u301" data-label="bid_list_item">
+                        <div id="u301-1_div" class="u301_div selected"></div>
+                        <!-- Unnamed () -->
+                        <div id="u302-1" class="u302 text" style="display: none; visibility: hidden">
+                          <p><span></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- delete (动态面板) -->
+                <div id="u303-1" class="ax_default u303" data-label="delete" style="display: none; visibility: hidden">
+                  <div id="u303-1_state0" class="panel_state u303_state0" data-label="State1">
+                    <div id="u303-1_state0_content" class="panel_state_content u303_state0_content">
+
+                      <!-- delBtn (组合) -->
+                      <div id="u304-1" class="ax_default u304" data-label="delBtn">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u305-1" class="ax_default box_3 u305">
+                          <div id="u305-1_div" class="u305_div"></div>
+                          <!-- Unnamed () -->
+                          <div id="u306-1" class="u306 text" style="visibility: visible;">
+                            <p><span>删除</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- msg (文本框) -->
+                <div id="u307-1" class="ax_default text_field u307" data-label="msg">
+                  <input id="u307-1_input" type="number" value="4.8" class="u307_input"/>
+                </div>
+
+                <!-- amount (文本框) -->
+                <div id="u308-1" class="ax_default text_field u308" data-label="amount">
+                  <input id="u308-1_input" type="number" value="4" class="u308_input"/>
+                </div>
+              </div>
+              <div id="u299-2" class="preeval" style="width: 375px; height: 42px;">
+
+                <!-- bid-split-item (动态面板) -->
+                <div id="u300-2" class="ax_default u300" data-label="bid-split-item">
+                  <div id="u300-2_state0" class="panel_state u300_state0" data-label="State1">
+                    <div id="u300-2_state0_content" class="panel_state_content u300_state0_content">
+
+                      <!-- bid_list_item (矩形) -->
+                      <div id="u301-2" class="ax_default box_1 selected u301" data-label="bid_list_item">
+                        <div id="u301-2_div" class="u301_div selected"></div>
+                        <!-- Unnamed () -->
+                        <div id="u302-2" class="u302 text" style="display: none; visibility: hidden">
+                          <p><span></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- delete (动态面板) -->
+                <div id="u303-2" class="ax_default u303" data-label="delete" style="display: none; visibility: hidden">
+                  <div id="u303-2_state0" class="panel_state u303_state0" data-label="State1">
+                    <div id="u303-2_state0_content" class="panel_state_content u303_state0_content">
+
+                      <!-- delBtn (组合) -->
+                      <div id="u304-2" class="ax_default u304" data-label="delBtn">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u305-2" class="ax_default box_3 u305">
+                          <div id="u305-2_div" class="u305_div"></div>
+                          <!-- Unnamed () -->
+                          <div id="u306-2" class="u306 text" style="visibility: visible;">
+                            <p><span>删除</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- msg (文本框) -->
+                <div id="u307-2" class="ax_default text_field u307" data-label="msg">
+                  <input id="u307-2_input" type="number" value="5.3" class="u307_input"/>
+                </div>
+
+                <!-- amount (文本框) -->
+                <div id="u308-2" class="ax_default text_field u308" data-label="amount">
+                  <input id="u308-2_input" type="number" value="3" class="u308_input"/>
+                </div>
+              </div>
+              <div id="u299-3" class="preeval" style="width: 375px; height: 42px;">
+
+                <!-- bid-split-item (动态面板) -->
+                <div id="u300-3" class="ax_default u300" data-label="bid-split-item">
+                  <div id="u300-3_state0" class="panel_state u300_state0" data-label="State1">
+                    <div id="u300-3_state0_content" class="panel_state_content u300_state0_content">
+
+                      <!-- bid_list_item (矩形) -->
+                      <div id="u301-3" class="ax_default box_1 selected u301" data-label="bid_list_item">
+                        <div id="u301-3_div" class="u301_div selected"></div>
+                        <!-- Unnamed () -->
+                        <div id="u302-3" class="u302 text" style="display: none; visibility: hidden">
+                          <p><span></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- delete (动态面板) -->
+                <div id="u303-3" class="ax_default u303" data-label="delete" style="display: none; visibility: hidden">
+                  <div id="u303-3_state0" class="panel_state u303_state0" data-label="State1">
+                    <div id="u303-3_state0_content" class="panel_state_content u303_state0_content">
+
+                      <!-- delBtn (组合) -->
+                      <div id="u304-3" class="ax_default u304" data-label="delBtn">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u305-3" class="ax_default box_3 u305">
+                          <div id="u305-3_div" class="u305_div"></div>
+                          <!-- Unnamed () -->
+                          <div id="u306-3" class="u306 text" style="visibility: visible;">
+                            <p><span>删除</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- msg (文本框) -->
+                <div id="u307-3" class="ax_default text_field u307" data-label="msg">
+                  <input id="u307-3_input" type="number" value="5.4" class="u307_input"/>
+                </div>
+
+                <!-- amount (文本框) -->
+                <div id="u308-3" class="ax_default text_field u308" data-label="amount">
+                  <input id="u308-3_input" type="number" value="1" class="u308_input"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bidAmount (矩形) -->
+      <div id="u309" class="ax_default button selected" data-label="bidAmount" title="投标数量" selectiongroup="menu_checked_tab">
+        <div id="u309_div" class="selected"></div>
+        <!-- Unnamed () -->
+        <div id="u310" class="text" style="display: none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- 投标标顶部菜单 (动态面板) -->
+      <div id="u311" class="ax_default" data-label="投标标顶部菜单">
+        <div id="u311_state0" class="panel_state" data-label="State1">
+          <div id="u311_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (顶部菜单) -->
+
+            <!-- Unnamed (新母版 1) -->
+
+            <!-- Unnamed (组合) -->
+            <div id="u314" class="ax_default">
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u315" class="ax_default box_1 disabled">
+              <div id="u315_div" class="disabled"></div>
+              <!-- Unnamed () -->
+              <div id="u316" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u317" class="ax_default icon1">
+              <img id="u317_img" class="img " src="images/bid-add-page/u127.png"/>
+              <!-- Unnamed () -->
+              <div id="u318" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u319" class="ax_default _二级标题">
+              <div id="u319_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u320" class="text" style="visibility: visible;">
+                <p><span>投标拆分</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u321" class="ax_default _图片">
+              <img id="u321_img" class="img " src="images/index/u34.png"/>
+              <!-- Unnamed () -->
+              <div id="u322" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u323" class="ax_default _二级标题">
+              <div id="u323_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u324" class="text" style="visibility: visible;">
+                <p><span>Done</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u325" class="ax_default">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u326" class="ax_default box_1">
+          <div id="u326_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u327" class="text" style="display: none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u328" class="ax_default box_1">
+          <div id="u328_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u329" class="text" style="visibility: visible;">
+            <p><span>新投标信息</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- bid-bond-message (动态面板) -->
+      <div id="u330" class="ax_default" data-label="bid-bond-message">
+        <div id="u330_state0" class="panel_state" data-label="State1">
+          <div id="u330_state0_content" class="panel_state_content">
+
+            <!-- bond-item-table (中继器) -->
+            <div id="u331" class="ax_default" data-label="bond-item-table">
+              <script id="u331_script" type="axure-repeater-template" data-label="bond-item-table">
+
+                <!-- Unnamed (动态面板) -->
+                <div id="u332" class="ax_default u332">
+                  <div id="u332_state0" class="panel_state u332_state0" data-label="State1">
+                    <div id="u332_state0_content" class="panel_state_content u332_state0_content">
+
+                      <!-- column (矩形) -->
+                      <div id="u333" class="ax_default box_1 u333" data-label="column">
+                        <div id="u333_div" class="u333_div"></div>
+                        <!-- Unnamed () -->
+                        <div id="u334" class="u334 text" style="display: none; visibility: hidden">
+                          <p><span></span></p>
+                        </div>
+                      </div>
+
+                      <!-- bondName (矩形) -->
+                      <div id="u335" class="ax_default _三级标题 u335" data-label="bondName">
+                        <div id="u335_div" class="u335_div"></div>
+                        <!-- Unnamed () -->
+                        <div id="u336" class="u336 text" style="visibility: visible;">
+                          <p><span>18陕有色SCP003</span></p>
+                        </div>
+                      </div>
+
+                      <!-- date (矩形) -->
+                      <div id="u337" class="ax_default label u337" data-label="date">
+                        <div id="u337_div" class="u337_div"></div>
+                        <!-- Unnamed () -->
+                        <div id="u338" class="u338 text" style="visibility: visible;">
+                          <p><span>2018-08-10</span></p>
+                        </div>
+                      </div>
+
+                      <!-- msg (文本段落) -->
+                      <div id="u339" class="ax_default _文本段落 u339" data-label="msg">
+                        <img id="u339_img" class="img u339_img" src="images/bid-add-page/msg_u144.png"/>
+                        <!-- Unnamed () -->
+                        <div id="u340" class="u340 text" style="visibility: visible;">
+                          <p><span>360D/A/AA/A--/0~8/美国式/国有企业</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </script>
+              <div id="u331-1" class="" style="width: 375px; height: 40px;">
+
+                <!-- Unnamed (动态面板) -->
+                <div id="u332-1" class="ax_default u332">
+                  <div id="u332-1_state0" class="panel_state u332_state0" data-label="State1">
+                    <div id="u332-1_state0_content" class="panel_state_content u332_state0_content">
+
+                      <!-- column (矩形) -->
+                      <div id="u333-1" class="ax_default box_1 u333" data-label="column">
+                        <div id="u333-1_div" class="u333_div"></div>
+                        <!-- Unnamed () -->
+                        <div id="u334-1" class="u334 text" style="display: none; visibility: hidden">
+                          <p><span></span></p>
+                        </div>
+                      </div>
+
+                      <!-- bondName (矩形) -->
+                      <div id="u335-1" class="ax_default _三级标题 u335" data-label="bondName">
+                        <div id="u335-1_div" class="u335_div"></div>
+                        <!-- Unnamed () -->
+                        <div id="u336-1" class="u336 text" style="visibility: visible;">
+                          <p><span>18陕有色SCP003</span></p>
+                        </div>
+                      </div>
+
+                      <!-- date (矩形) -->
+                      <div id="u337-1" class="ax_default label u337" data-label="date">
+                        <div id="u337-1_div" class="u337_div"></div>
+                        <!-- Unnamed () -->
+                        <div id="u338-1" class="u338 text" style="visibility: visible;">
+                          <p><span>2018-08-10</span></p>
+                        </div>
+                      </div>
+
+                      <!-- msg (文本段落) -->
+                      <div id="u339-1" class="ax_default _文本段落 u339" data-label="msg">
+                        <img id="u339-1_img" class="img u339_img" src="images/bid-add-page/msg_u144.png"/>
+                        <!-- Unnamed () -->
+                        <div id="u340-1" class="u340 text" style="visibility: visible;">
+                          <p><span>360D/A/AA/A--/0~8/美国式/国有企业</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 标位录入底部菜单 (动态面板) -->
+      <div id="u341" class="ax_default" data-label="标位录入底部菜单">
+        <div id="u341_state0" class="panel_state" data-label="State1">
+          <div id="u341_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u342" class="ax_default box_1">
+              <div id="u342_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u343" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u344" class="ax_default">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u345" class="ax_default label">
+                <div id="u345_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u346" class="text" style="visibility: visible;">
+                  <p><span>新券</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u347" class="ax_default icon1" title="ss">
+                <img id="u347_img" class="img " src="images/bid-add-page/u159.png"/>
+                <!-- Unnamed () -->
+                <div id="u348" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u349" class="ax_default">
+
+              <!-- Unnamed (组合) -->
+              <div id="u350" class="ax_default">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u351" class="ax_default label">
+                  <div id="u351_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u352" class="text" style="visibility: visible;">
+                    <p><span>投标</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u353" class="ax_default icon1">
+                <img id="u353_img" class="img " src="images/bid-add-page/u165.png"/>
+                <!-- Unnamed () -->
+                <div id="u354" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u355" class="ax_default">
+
+              <!-- Unnamed (组合) -->
+              <div id="u356" class="ax_default">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u357" class="ax_default label">
+                  <div id="u357_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u358" class="text" style="visibility: visible;">
+                    <p><span>获配</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u359" class="ax_default icon1">
+                <img id="u359_img" class="img " src="images/index/u65.png"/>
+                <!-- Unnamed () -->
+                <div id="u360" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u361" class="ax_default">
+
+              <!-- Unnamed (组合) -->
+              <div id="u362" class="ax_default">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u363" class="ax_default label">
+                  <div id="u363_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u364" class="text" style="visibility: visible;">
+                    <p><span>我的</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (形状) -->
+              <div id="u365" class="ax_default icon1">
+                <img id="u365_img" class="img " src="images/index/u71.png"/>
+                <!-- Unnamed () -->
+                <div id="u366" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
